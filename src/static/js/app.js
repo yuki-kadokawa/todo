@@ -177,6 +177,7 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
     );
 }
 
+<h1>Beetles</h1>
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // memo
