@@ -3,6 +3,7 @@ function App() {
     return (
         <Container>
             <Row>
+                <h1>Beetles</h1>
                 <Col md={{ offset: 3, span: 6 }}>
                     <TodoListCard />
                 </Col>
@@ -106,7 +107,7 @@ function AddItemForm({ onNewItem }) {
                         disabled={!newItem.length}
                         className={submitting ? 'disabled' : ''}
                     >
-                        {submitting ? 'Adding...' : 'Add Item'}
+                        {submitting ? 'Adding...' : 'Addddd Item'}
                     </Button>
                 </InputGroup.Append>
             </InputGroup>
