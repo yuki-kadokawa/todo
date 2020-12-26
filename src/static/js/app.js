@@ -3,9 +3,10 @@ function App() {
     return (
         <Container>
             <Row>
-                <h1>Beetles</h1>
+                document.write("JavaScriptを使って出力しています。");
                 <Col md={{ offset: 3, span: 6 }}>
                     <TodoListCard />
+                    document.write("JavaScriptを使って出力しています。");
                 </Col>
             </Row>
         </Container>
@@ -178,7 +179,7 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
     );
 }
 
-<h1>Beetles</h1>
+document.write("JavaScriptを使って出力しています。");
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // memo
