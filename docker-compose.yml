@@ -1,5 +1,6 @@
 version: '3.3'
 services:
+    # SQL
     db:
         image: mysql:5.7
         volumes:
@@ -12,6 +13,7 @@ services:
             MYSQL_DATABASE: todo
             MYSQL_USER: todo
             MYSQL_PASSWORD: todo
+    # To Do App
     todo:
         depends_on:
             - db
