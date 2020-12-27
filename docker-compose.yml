@@ -1,0 +1,29 @@
+version: '3.3'
+services:
+    db:
+        image: mysql:5.7
+        volumes:
+            - db_data:/var/lib/mysql
+        restart: always
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: roottodo
+            MYSQL_DATABASE: todo
+            MYSQL_USER: todo
+            MYSQL_PASSWORD: todo
+    todo:
+        depends_on:
+            - db
+        image: kadokawa571089/todo:latest
+        ports:
+            - "3000:3000"
+        restart: always
+        environment:
+            MYSQL_HOST: db
+            MYSQL_USER: todo
+            MYSQL_PASSWORD: todo
+            MYSQL_DB: todo
+volumes:
+    db_data: {}
+
